@@ -59,8 +59,10 @@ Step that perform a mutation testing using Cosmic Ray:
 - Navigate to the source file
 - Create configuration file
 - Initialize a session (create a SQL file)
-- Check that the test suite passes on unmutated code
-- 
+- Check that the test suite passes on un-mutated code
+- Execute the test
+- Examining the session
+- Print out an HTML report
 
 ## Source module and tests
 
@@ -70,7 +72,7 @@ Step that perform a mutation testing using Cosmic Ray:
   - Refer to this directory as ROOT (or $ROOT if using shell code).
 
 ## Template for mutation testing
-
+- Basic temple for manual execution
 ```bash
 cd ROOT_AUTOMATION
 
@@ -99,7 +101,8 @@ Please refer to [4] for more details.
 
 [Live Video](https://drive.google.com/file/d/1SnaSN7J7FXdmuhVTPIp7Jbwr0xW8_pGe/view?usp=sharing)
 
-## Automation:
+## Temple for Automation:
+- Basic template for automation
 ```python
 from subprocess import call
 import os
@@ -126,8 +129,8 @@ call(["cr-html", "tutorial.sqlite", ">", "report.html"], shell=True)
 ```
 
 ## Material:
-- All the script can be found at [GitHub]()
-
+- All the script can be found at [Truc's GitHub](https://github.com/jackyhuynh/mutation-testing-using-python)
+- https://github.com/jackyhuynh/mutation-testing-using-python
 ## Technology
 List of technology
 - Python 
