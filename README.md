@@ -62,18 +62,7 @@ Step that perform a mutation testing using Cosmic Ray
   - Creating a new directory which will contain the CUT, the tests, and eventually the Cosmic Ray data. 
   - Refer to this directory as ROOT (or $ROOT if using shell code).
 
-## Technology
-List of technology
-- Python 
-- Object Oriented Design
-- PyCharm IDE
-
-## References
-- [Python MutPy](https://github.com/mutpy/mutpy#:~:text=MutPy%20is%20a%20mutation%20testing%20tool%20for%20Python,coverage%20analysis.%20Mutation%20testing%20From%20article%20at%20Wikipedia%3A?msclkid=34e08178b28611ec883cce2f63a34c67) [3]
-- [Mutation Testing with Python](https://medium.com/analytics-vidhya/unit-testing-in-python-mutation-testing-7a70143180d8) [2]
-- [Python Standard Library](https://pypi.org/) [1]
-- [Cosmic Ray Documentation](https://cosmic-ray.readthedocs.io/en/latest/tutorials/intro/index.html) [4]
-
+## Template for mutation testing
 ```bash
 cd ROOT_AUTOMATION
 
@@ -89,5 +78,56 @@ cosmic-ray --verbosity=INFO baseline tutorial.toml
 # Examining the session
 cr-report tutorial.sqlite --show-pending
 
+# Execute
+cosmic-ray exec tutorial.toml tutorial.sqlite
 
+# HTML report
+cr-html tutorial.sqlite > report.html
 ```
+
+Please refer to [4] for more details
+
+## Live Demonstration:
+
+
+## Automation:
+```python
+from subprocess import call
+import os
+
+# can also use os but not recommend
+
+# Step 1: Initializing a session ("tutorial.sqlite")
+call(["cosmic-ray", "init", "tutorial.toml", "tutorial.sqlite"], shell=True)
+
+# Check that the test suite passes on unmutated code (OPTIONAL)
+call(["cosmic-ray", "--verbosity=INFO", "baseline", "tutorial.toml"], shell=True)
+
+# Examining the session with cr-report  (OPTIONAL)
+call(["cosmic-ray", "tutorial.sqlite", "--show-pending"], shell=True)
+
+# Step 2: Actual execute the test script:
+call(["cosmic-ray", "exec", "tutorial.toml", "tutorial.sqlite"], shell=True)
+
+# Examining the session with cr-report (OPTIONAL)
+call(["cosmic-ray", "tutorial.sqlite", "--show-pending"], shell=True)
+
+# Creating an HTML report:
+call(["cr-html", "tutorial.sqlite", ">", "report.html"], shell=True)
+```
+
+## Material:
+- All the script can be found at 
+
+## Technology
+List of technology
+- Python 
+- Object Oriented Design
+- PyCharm IDE
+
+## References
+- [Python MutPy](https://github.com/mutpy/mutpy#:~:text=MutPy%20is%20a%20mutation%20testing%20tool%20for%20Python,coverage%20analysis.%20Mutation%20testing%20From%20article%20at%20Wikipedia%3A?msclkid=34e08178b28611ec883cce2f63a34c67) [3]
+- [Mutation Testing with Python](https://medium.com/analytics-vidhya/unit-testing-in-python-mutation-testing-7a70143180d8) [2]
+- [Python Standard Library](https://pypi.org/) [1]
+- [Cosmic Ray Documentation](https://cosmic-ray.readthedocs.io/en/latest/tutorials/intro/index.html) [4]
+
