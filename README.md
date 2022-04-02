@@ -73,3 +73,21 @@ List of technology
 - [Mutation Testing with Python](https://medium.com/analytics-vidhya/unit-testing-in-python-mutation-testing-7a70143180d8) [2]
 - [Python Standard Library](https://pypi.org/) [1]
 - [Cosmic Ray Documentation](https://cosmic-ray.readthedocs.io/en/latest/tutorials/intro/index.html) [4]
+
+```bash
+cd ROOT_AUTOMATION
+
+# Create a new configuration file
+cosmic-ray new-config tutorial.toml
+
+# The first step in a full testing run, then, is to initialize a session:
+cosmic-ray init tutorial.toml tutorial.sqlite
+
+# You can use the baseline command to check that the test suite passes on unmutated code:
+cosmic-ray --verbosity=INFO baseline tutorial.toml
+
+# Examining the session
+cr-report tutorial.sqlite --show-pending
+
+
+```
