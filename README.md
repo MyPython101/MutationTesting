@@ -5,19 +5,27 @@
 - Python packages that support mutation testing: 
   - mutation-waterfall 0.1.1: Python library for visualizing mutation landscape as waterfall diagram.
   - mutmut 2.4.0: Mutmut is a mutation testing system for Python, with a strong focus on ease of use.
-  - mutpy 0.6.1: MutPy is a mutation testing tool for Python 3.3+ source code. 
+  - mutpy 0.6.1: MutPy is a mutation testing tool for Python 3.3+ source code (no longer support). 
   - mutation 0.4.7: test mutations for pytest. The goal of mutation is to give an idea on how robust, and help improve test suites.
   - cosmic-ray 8.3.5: Cosmic Ray is a mutation testing tool for Python 3. Long-term support and successfully used on a wide variety of projects.
 
 ## How to choose a tools (Python):
 
-- Look for how many user
+- Look for how many people are using the tool(s)? (GitHub)
 - How many project that it has been successfully used?
-- How many extension/support are available on Python Standard Library (Pypi.org)
-- Is the product long term support?
-- Is the product mature?
+- How many extension/support of the tool(s) are available on Python Standard Library (Pypi.org)?
+- Is the tool(s) long-term support?
+- Is the tool(s) mature?
+
+## Why Cosmic Ray for Python Mutation Testing
+- Cosmic Ray has been successfully used on a wide variety of projects ranging from assemblers to oil exploration software.
+- There are more than 10 related projects to cosmic-ray for mutation testing.
+- Code base, easy to implement automation
+- Long term support
+- Retrieved from [1]
 
 ## Mutation Testing Overview
+
 - Mutation testing (or Mutation analysis or Program mutation) evaluates the quality of software tests. 
 - Mutation testing involves modifying a program's source code or byte code in small ways. 
 - A test suite that does not detect and reject the mutated code is considered defective. 
@@ -27,6 +35,7 @@
 - Retrieved from [3]
 
 ## Requirement:
+
 - Knowledge of Python Programming
 - Basic Python Command Line to develop automation test (optional)
 - Python:  an interpreted high-level general-purpose programming language, it can be used for:
@@ -34,9 +43,6 @@
   - data sciences
   - back-end development
   - software development
-
-## Advantage:
-- Code base, easy to implement automation
 
 ## Installation: 
 - 
