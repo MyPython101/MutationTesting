@@ -54,6 +54,8 @@ pip install cosmic-ray
 - [video](#)
 
 ## Implementation: 
+Step that perform a mutation testing using Cosmic Ray
+
 ## Source module and tests
 - Mutation testing works by making small mutations to the code under test (CUT) and then running a test suite over the mutated code. 
 - For this tutorial, then, we’ll need to create our CUT and a test suite for it. 
