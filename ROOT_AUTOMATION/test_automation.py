@@ -1,2 +1,2 @@
-import os
-os.system("ls -l")
+from subprocess import call
+call(["ls", "-l"])
