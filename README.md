@@ -58,6 +58,8 @@ pip install cosmic-ray
 Step that perform a mutation testing using Cosmic Ray:
 - Navigate to the source file
 - Create configuration file
+- Initialize a session (create a SQL file)
+- Check that the test suite passes on unmutated code
 - 
 
 ## Source module and tests
@@ -91,10 +93,11 @@ cosmic-ray exec tutorial.toml tutorial.sqlite
 cr-html tutorial.sqlite > report.html
 ```
 
-Please refer to [4] for more details
+Please refer to [4] for more details.
 
 ## Live Demonstration:
 
+[Live Video](https://drive.google.com/file/d/1SnaSN7J7FXdmuhVTPIp7Jbwr0xW8_pGe/view?usp=sharing)
 
 ## Automation:
 ```python
@@ -123,7 +126,7 @@ call(["cr-html", "tutorial.sqlite", ">", "report.html"], shell=True)
 ```
 
 ## Material:
-- All the script can be found at 
+- All the script can be found at [GitHub]()
 
 ## Technology
 List of technology
