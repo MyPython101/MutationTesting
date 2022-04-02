@@ -7,7 +7,7 @@
   - mutmut 2.4.0: Mutmut is a mutation testing system for Python, with a strong focus on ease of use.
   - mutpy 0.6.1: MutPy is a mutation testing tool for Python 3.3+ source code. 
   - mutation 0.4.7: test mutations for pytest. The goal of mutation is to give an idea on how robust, and help improve test suites.
-  - cosmic-ray 8.3.5: Cosmic Ray is a mutation testing tool for Python 3. Long-term support and 
+  - cosmic-ray 8.3.5: Cosmic Ray is a mutation testing tool for Python 3. Long-term support and successfully used on a wide variety of projects.
 
 ## How to choose a tools (Python):
 
