@@ -1,33 +1,41 @@
-# TEMPLATE GENERAL
+# TEMPLATE for PYTHON Developer using PYCHARM
 
 ## Introduction
-Please look for other README.md file if you are intereted any specific languages, then delete all the other README.md file 
-and rename it to README.md . Introduce the project scope and purpose. You can also keep this private and organize this GitHub as a private libary for yourself.
-
 
 ## Documents/Research Paper
-Link your research paper <a href="https://github.com/jackyhuynh/template-git-jupiter-notebook-md/blob/main/documents/resarch-sample.pdf">here</a> if you need
 
 ## Technology
 List of technology
+- Python 
+- Object Oriented Design
+- PyCharm IDE
 
 ## Getting Started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
 ### Prerequisites
 What things you need to install the software and how to install them
+- PyCharm Community IDE: Be More Productive: Save time while PyCharm takes care of the routine. Focus on the bigger things and embrace the keyboard-centric approach to get the most of PyCharm's many productivity features. Get Smart Assistance: PyCharm knows everything about your code. Rely on it for intelligent code completion, on-the-fly error checking and quick-fixes, easy project navigation, and much more.
+- Please download open the source folder as a project (right click on the folder that contain main, templates, static, and venv and run as open Python Project using PyCharm).
+- PLease download all the necessary packages before run the application. If you use PyCharm, it will take care of your missing package or
+```
+# or u can use
+pip install all-missing-package(replace all-missing-package with the package(packages) that you intend to install)
+```
 
 ### Installing
-A step by step series of examples that tell you how to get a development enviroment running
+A step by step series of examples that tell you how to get a development enviroment running:
+* Install [PyCharm](https://www.jetbrains.com/help/pycharm/installation-guide.html) Community Edition.
+
 
 ## Running the tests
-Explain how to run the automated tests for this system:
+
 
 ## Deployment
-How to deploy the app
+All the notebook can be used for research and academic basic function for Python. 
 
 ## Built With
-* Tools?
+* [PyCharm Community IDE](https://www.jetbrains.com/pycharm/download/#section=windows) 
 
 ## Contributing
 Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
@@ -37,6 +45,7 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduc
 We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](). 
 
 ## Authors
+
 * **Truc Huynh** - *Initial work* - [TrucDev](https://github.com/jackyhuynh)
 
 ## Format
