@@ -45,7 +45,13 @@
   - software development
 
 ## Installation: 
-- 
+- From Anaconda or Python Console (within PyCharm IDE)
+```bash
+pip install cosmic-ray
+```
+- [video](#)
+
+## How to implement 
 
 
 
