@@ -2,7 +2,10 @@
 
 ## Introduction:
 
-- Python packages that support mutation testing: 
+Mutation Testing is a test which expect lightly diffrent source code would create diffrent result. Another word to say is mutation testing is a fault-based testing technique where variations of a software program are subjected to the test dataset. This is done to determine the effectiveness of the test set in isolating the deviations.
+
+## Python packages that support mutation testing:
+
   - mutation-waterfall 0.1.1: Python library for visualizing mutation landscape as waterfall diagram.
   - mutmut 2.4.0: Mutmut is a mutation testing system for Python, with a strong focus on ease of use.
   - mutpy 0.6.1: MutPy is a mutation testing tool for Python 3.3+ source code (no longer support). 
