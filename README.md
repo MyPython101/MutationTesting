@@ -2,7 +2,8 @@
 
 ## Introduction:
 
-Mutation Testing is a test which expect lightly diffrent source code would create diffrent result. Another word to say is mutation testing is a fault-based testing technique where variations of a software program are subjected to the test dataset. This is done to determine the effectiveness of the test set in isolating the deviations.
+Mutation Testing is a test which expect lightly diffrent source code would create diffrent result(output). Another word to say is mutation testing is a fault-based testing technique where variations of a software program are subjected to the test dataset. This is done to determine the effectiveness of the test set in isolating the deviations.
+Changes in sourcode must create changes in result
 
 ## Python packages that support mutation testing:
 
