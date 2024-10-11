@@ -1,150 +1,89 @@
 # Mutation Testing using Python
 
-## Introduction:
+## Introduction
 
-Mutation Testing is a test which expect lightly diffrent source code would create diffrent result(output). Another word to say is mutation testing is a fault-based testing technique where variations of a software program are subjected to the test dataset. This is done to determine the effectiveness of the test set in isolating the deviations.
-Changes in sourcode must create changes in result
+Mutation testing evaluates how well a test suite can detect changes in source code. If a change (mutation) does not alter the test results, the tests may be ineffective.
 
-## Python packages that support mutation testing:
+## Popular Python Tools
 
-  - mutation-waterfall 0.1.1: Python library for visualizing mutation landscape as waterfall diagram.
-  - mutmut 2.4.0: Mutmut is a mutation testing system for Python, with a strong focus on ease of use.
-  - mutpy 0.6.1: MutPy is a mutation testing tool for Python 3.3+ source code (no longer support). 
-  - mutation 0.4.7: test mutations for pytest. The goal of mutation is to give an idea on how robust, and help improve test suites.
-  - cosmic-ray 8.3.5: Cosmic Ray is a mutation testing tool for Python 3. Long-term support and successfully used on a wide variety of projects.
+- **mutmut**: Easy-to-use mutation testing system.
+- **mutation-waterfall**: Visualizes mutation landscapes.
+- **mutpy**: (No longer supported) Mutation testing tool for Python.
+- **mutation**: Pytest integration for mutation testing.
+- **cosmic-ray**: Widely used, long-term support mutation testing tool for Python 3.
 
-## How to choose a tools (Python):
+## Choosing a Tool
 
-- Look for how many people are using the tool(s)? (GitHub)
-- How many project that it has been successfully used?
-- How many extension/support of the tool(s) are available on Python Standard Library (Pypi.org)?
-- Is the tool(s) long-term support?
-- Is the tool(s) mature?
+Consider:
+- Popularity and usage
+- Project history and maturity
+- Availability of support/extensions
+- Long-term maintenance
 
-## Why Cosmic Ray for Python Mutation Testing
+## Why Choose Cosmic Ray?
 
-- Cosmic Ray has been successfully used on a wide variety of projects ranging from assemblers to oil exploration software.
-- There are more than 10 related projects to cosmic-ray for mutation testing.
-- Code base, easy to designed complex test cases
-- Long term support
-- Can be use automation (schedule scripts)
-- Retrieved from [1]
+- Used in diverse projects.
+- Extensive related projects.
+- Supports automated and complex test scenarios.
+- Long-term support.
 
-## Mutation Testing Overview
+## Overview of Mutation Testing
 
-- Mutation testing (or Mutation analysis or Program mutation) evaluates the quality of software tests. 
-- Mutation testing involves modifying a program's source code or byte code in small ways. 
-- A test suite that does not detect and reject the mutated code is considered defective. 
-- These so-called mutations, are based on well-defined mutation operators that either mimic typical programming errors 
-(such as using the wrong operator or variable name) or force the creation of valuable tests (such as driving each expression to zero). 
-- The purpose is to help the tester develop effective tests or locate weaknesses in the test data used for the program or in sections of the code that are seldom or never accessed during execution.
-- Retrieved from [3]
+Mutation testing modifies code to introduce small errors and checks if the test suite can catch them. Effective tests will detect the mutations; if they don’t, the tests need improvement.
 
-## Requirement:
+## Requirements
 
-- Knowledge of Python Programming
-- Basic Python Command Line
-- Python:  an interpreted high-level general-purpose programming language, it can be used for:
-  - web development
-  - data sciences
-  - back-end development
-  - software development
+- Python programming knowledge.
+- Basic command-line skills.
+  
+## Installation
 
-## Installation: 
-- From Anaconda or Python Console (within PyCharm IDE)
 ```bash
 pip install cosmic-ray
 ```
-- [video](#)
 
-## Implementation
+## Implementation Steps
 
-Step that perform a mutation testing using Cosmic Ray:
-- Navigate to the source file
-- Create configuration file
-- Initialize a session (create a SQL file)
-- Check that the test suite passes on un-mutated code
-- Execute the test
-- Examining the session
-- Print out an HTML report
+1. Navigate to the source file.
+2. Create a configuration file.
+3. Initialize a session (SQL file).
+4. Check if the test suite passes on un-mutated code.
+5. Execute the tests.
+6. Examine the session.
+7. Generate an HTML report.
 
-## Source module and tests
+## Manual Execution Template
 
-- Mutation testing works by making small mutations to the code under test (CUT) and then running a test suite over the mutated code. 
-- For this tutorial, then, we’ll need to create our CUT and a test suite for it. 
-  - Creating a new directory which will contain the CUT, the tests, and eventually the Cosmic Ray data. 
-  - Refer to this directory as ROOT (or $ROOT if using shell code).
-
-## Template for mutation testing
-- Basic temple for manual execution
 ```bash
-cd ROOT_AUTOMATION
-
-# Create a new configuration file
+# Create config file
 cosmic-ray new-config tutorial.toml
 
-# The first step in a full testing run, then, is to initialize a session:
+# Initialize session
 cosmic-ray init tutorial.toml tutorial.sqlite
 
-# You can use the baseline command to check that the test suite passes on unmutated code:
+# Check un-mutated code
 cosmic-ray --verbosity=INFO baseline tutorial.toml
 
-# Examining the session
-cr-report tutorial.sqlite --show-pending
-
-# Execute
+# Execute tests
 cosmic-ray exec tutorial.toml tutorial.sqlite
 
-# HTML report
+# Generate HTML report
 cr-html tutorial.sqlite > report.html
 ```
 
-Please refer to [4] for more details.
+## Automation Example
 
-## Live Demonstration:
-
-[Live Video](https://www.youtube.com/watch?v=zXgSk4M3B38)
-
-## Temple for Automation:
-- Basic template for automation
 ```python
 from subprocess import call
-import os
 
-# can also use os but not recommend
-
-# Step 1: Initializing a session ("tutorial.sqlite")
+# Initialize session
 call(["cosmic-ray", "init", "tutorial.toml", "tutorial.sqlite"], shell=True)
 
-# Check that the test suite passes on unmutated code (OPTIONAL)
-call(["cosmic-ray", "--verbosity=INFO", "baseline", "tutorial.toml"], shell=True)
-
-# Examining the session with cr-report  (OPTIONAL)
-call(["cosmic-ray", "tutorial.sqlite", "--show-pending"], shell=True)
-
-# Step 2: Actual execute the test script:
+# Execute tests
 call(["cosmic-ray", "exec", "tutorial.toml", "tutorial.sqlite"], shell=True)
 
-# Examining the session with cr-report (OPTIONAL)
-call(["cosmic-ray", "tutorial.sqlite", "--show-pending"], shell=True)
-
-# Creating an HTML report:
+# Generate HTML report
 call(["cr-html", "tutorial.sqlite", ">", "report.html"], shell=True)
 ```
 
-## Material:
-- All the script can be found at [Truc's GitHub](https://github.com/jackyhuynh/mutation-testing-using-python)
-- https://github.com/jackyhuynh/mutation-testing-using-python
-
-## Technology
-List of technology
-- Python 
-- Object Oriented Design
-- PyCharm IDE
-
-## References
-- [Python MutPy](https://github.com/mutpy/mutpy#:~:text=MutPy%20is%20a%20mutation%20testing%20tool%20for%20Python,coverage%20analysis.%20Mutation%20testing%20From%20article%20at%20Wikipedia%3A?msclkid=34e08178b28611ec883cce2f63a34c67) [3]
-- [Mutation Testing with Python](https://medium.com/analytics-vidhya/unit-testing-in-python-mutation-testing-7a70143180d8) [2]
-- [Python Standard Library](https://pypi.org/) [1]
-- [Cosmic Ray Documentation](https://cosmic-ray.readthedocs.io/en/latest/tutorials/intro/index.html) [4]
-
+For more details, refer to the [live demo](https://www.youtube.com/watch?v=zXgSk4M3B38).

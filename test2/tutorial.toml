@@ -2,7 +2,7 @@
 module-path = "cel_to_fah.py"
 timeout = 10.0
 excluded-modules = []
-test-command = "python -m unittest test_script.py"
+test-command = "python -m unittest test.py"
 
 [cosmic-ray.distributor]
 name = "local"
